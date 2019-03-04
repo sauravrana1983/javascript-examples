@@ -1,8 +1,21 @@
-var express= require('express');
-var path= require('path');
+import express from 'express';
+import path from 'path';
+import webpack from 'webpack';
+import middleware from 'webpack-dev-middleware';
+import config from '../webpack.config';
 
-var port = 3000;
-var app = express();
+
+const port = 3000;
+const app = express();
+const compiler = webpack(config);
+
+
+const instance = middleware(compiler,{
+  publicPath: config.output.path
+});
+
+app.use(instance)
+app.use(express.static('dist'));
 
 app.get('/', function(req,res){
   res.sendFile(path.join(__dirname, '../src/index.html'));
