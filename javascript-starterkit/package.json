@@ -4,7 +4,9 @@
   "description": "Javascript Starter Kit",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "node buildScripts/startMessage.js",
+    "start": "node buildScripts/srcServer.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   "homepage": "https://github.com/sauravrana1983/javascript-examples#readme",
   "dependencies": {},
   "devDependencies": {
+    "chalk": "^2.4.2",
     "express": "^4.16.4",
     "nodemon": "^1.18.10"
   }
