@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/sauravrana1983/javascript-examples/issues"
   },
-  "homepage": "https://github.com/sauravrana1983/javascript-examples#readme"
+  "homepage": "https://github.com/sauravrana1983/javascript-examples#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
 }
